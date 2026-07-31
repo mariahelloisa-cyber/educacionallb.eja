@@ -1,0 +1,2389 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supletivo Educacional EJA</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16751784613"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16751784613');
+  </script>
+
+  <script>
+    // Conversão Google Ads sem atrapalhar a ida do cliente para o WhatsApp.
+    // O link do WhatsApp fica direto no href dos botões.
+    // Assim, mesmo se o Google Ads, JavaScript ou bloqueador falhar, o WhatsApp abre normalmente.
+    function gtag_report_conversion() {
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-16751784613/T0mRCMfj-eAZEKXl77M-',
+            'value': 1.0,
+            'currency': 'BRL'
+          });
+        }
+      } catch (e) {
+        console.warn('Conversão não registrada, mas o WhatsApp continuará abrindo.', e);
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+      --teal: #2AA9A5;
+      --teal-dark: #208985;
+      --blue: #1D4FBF;
+      --blue-dark: #0D3A8A;
+      --black: #111111;
+      --gray: #6f7785;
+      --light-bg: #f6f9fc;
+      --line: #e4ebf3;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 38px rgba(13, 58, 138, 0.08);
+      --shadow-strong: 0 24px 55px rgba(13, 58, 138, 0.13);
+    }
+
+    html, body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fff;
+      color: var(--black);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--teal);
+    }
+
+    a.btn,
+    button.btn {
+      color: #fff;
+      font-weight: 800;
+      border-radius: 16px;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      min-height: 56px;
+      box-shadow: 0 16px 30px rgba(37, 211, 102, 0.28), 0 6px 14px rgba(13, 58, 138, 0.15);
+    }
+
+    a.btn::before,
+    button.btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -90%;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+      transform: skewX(-18deg);
+      transition: 0.55s ease;
+    }
+
+    a.btn:hover,
+    button.btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 20px 36px rgba(37, 211, 102, 0.35), 0 8px 18px rgba(13, 58, 138, 0.18);
+    }
+
+    a.btn:hover::before,
+    button.btn:hover::before {
+      left: 135%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 48%, #208985 100%);
+      border: 2px solid rgba(255,255,255,0.32) !important;
+      animation: pulseCta 2.2s infinite;
+      color: #ffffff !important;
+    }
+
+    .btn-secondary {
+      background: linear-gradient(180deg, #1D4FBF 0%, #0D3A8A 52%, #082B66 100%);
+      border: 2px solid rgba(255,255,255,0.28) !important;
+      animation: pulseCta 2.2s infinite;
+      color: #fff !important;
+    }
+
+    @keyframes pulseCta {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.44), 0 16px 30px rgba(13, 58, 138, 0.18); }
+      70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 16px 30px rgba(13, 58, 138, 0.18); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 16px 30px rgba(13, 58, 138, 0.18); }
+    }
+
+    section {
+      width: 100%;
+    }
+
+    /* HEADER */
+    header {
+      min-height: 62vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      padding: 50px 20px;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(13, 58, 138, 0.78), rgba(18, 60, 124, 0.68));
+      z-index: 0;
+    }
+
+    header > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header h1,
+    header h2,
+    header a {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 4.5em;
+      line-height: 1;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.16);
+    }
+
+    header h2 {
+      font-size: 1.55em;
+      font-weight: 500;
+    }
+
+    header a.btn {
+      padding: 0.85em 3.5em;
+      font-size: 1.18em;
+      margin-top: 2em;
+      border: 2px solid rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    /* BOTÃO FLUTUANTE */
+    .whats-button {
+      width: 76px;
+      height: 76px;
+      background: linear-gradient(180deg, #25D366 0%, #128C4A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      box-shadow: 0 12px 26px rgba(18, 140, 74, .35);
+      border: 4px solid #fff;
+      animation: floatWhatsapp 1.8s infinite;
+    }
+
+    @keyframes floatWhatsapp {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-4px) scale(1.04); }
+    }
+
+    .whats-button img {
+      width: 70%;
+      height: auto;
+    }
+
+    /* CERTIFICAÇÕES */
+    .certificacoes {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4.5em 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(42,169,165,0.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(29,79,191,0.08), transparent 26%),
+        #ffffff;
+    }
+
+    .certificacoes h1 {
+      color: #061629;
+      font-size: 2.65em;
+      line-height: 1.15;
+      margin-bottom: 0.35em;
+      letter-spacing: -0.03em;
+    }
+
+    .certificacoes-subtitulo {
+      max-width: 760px;
+      color: #617086;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      font-weight: 500;
+      margin-bottom: 2.5em;
+    }
+
+    .certificacoes .flex-cards {
+      width: 100%;
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: stretch;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 2.2em;
+    }
+
+    .certificacoes .flex-cards .item {
+      position: relative;
+      border: 1px solid rgba(42,169,165,0.22);
+      border-radius: 22px;
+      min-height: 310px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.98) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 16px 22px;
+      box-shadow: 0 18px 36px rgba(13,58,138,0.10);
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .certificacoes .flex-cards .item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 5px solid var(--teal);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .certificacoes .flex-cards .item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(13,58,138,0.16);
+    }
+
+    .cert-logo-box {
+      width: 100%;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    .certificacoes .flex-cards .item img {
+      max-width: 92%;
+      max-height: 118px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .certificacoes .flex-cards .item span {
+      font-weight: 800;
+      text-align: center;
+      font-size: 1.02em;
+      line-height: 1.45;
+      color: #07182e;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .certificacoes .flex-cards .item small {
+      display: block;
+      margin-top: 12px;
+      color: var(--teal-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    a.btn.btn-blue,
+    a.btn.btn-orange {
+      padding: 0.8em 2em;
+      font-size: 1.1em;
+    }
+
+    .btn-blue { background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 100%); color: #ffffff !important; }
+    .btn-orange { background: linear-gradient(180deg, #1D4FBF 0%, #0D3A8A 100%); }
+
+
+
+    @media (max-width: 1180px) {
+      .certificacoes .flex-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .certificacoes .flex-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .certificacoes h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .certificacoes .flex-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .certificacoes .flex-cards .item {
+        min-height: 250px;
+      }
+    }
+
+    /* O QUE VOCÊ RECEBE */
+    .o-que-recebe {
+      padding: 4em 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(42,169,165,0.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(29,79,191,0.10), transparent 24%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+    }
+
+    .o-que-recebe .wrap {
+      width: 100%;
+      max-width: 1240px;
+      background:
+        linear-gradient(135deg, rgba(29,79,191,0.08), rgba(42,169,165,0.08)),
+        #ffffff;
+      border: 1px solid #dfe8f5;
+      border-radius: 26px;
+      box-shadow: var(--shadow-strong);
+      padding: 34px 24px 30px;
+      text-align: center;
+    }
+
+    .o-que-recebe h2 {
+      font-size: 2.4em;
+      color: #13203b;
+      margin-bottom: 1.2em;
+    }
+
+    .recebe-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-bottom: 2em;
+    }
+
+    .recebe-card {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #e6edf7;
+      border-radius: 18px;
+      padding: 22px 18px;
+      text-align: left;
+      box-shadow: 0 10px 22px rgba(13, 58, 138, 0.08);
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .recebe-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--blue) 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      box-shadow: 0 10px 18px rgba(29,79,191,0.18);
+    }
+
+    .recebe-card h3 {
+      font-size: 1.16rem;
+      line-height: 1.25;
+      color: var(--blue-dark);
+      font-weight: 800;
+    }
+
+    .recebe-card p {
+      font-size: 0.98rem;
+      line-height: 1.62;
+      color: #5f6777;
+      font-weight: 500;
+    }
+
+    .recebe-btn {
+      min-width: 340px;
+      max-width: 100%;
+      padding: 0.95em 2.5em;
+      border-radius: 16px !important;
+      font-size: 1.15em !important;
+      box-shadow: 0 16px 28px rgba(42,169,165,0.22);
+    }
+
+    /* INSCREVA-SE */
+    .inscricao-form {
+      padding: 4em 20px 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(42,169,165,0.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(29,79,191,0.10), transparent 24%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+    }
+
+    .inscricao-card {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      background: #ffffff;
+      border: 1px solid #dfe8f5;
+      border-radius: 26px;
+      box-shadow: var(--shadow-strong);
+      padding: 34px 30px;
+    }
+
+    .inscricao-selo {
+      position: absolute;
+      top: -26px;
+      right: -14px;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #FFD400;
+      color: #13203b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.15;
+      font-weight: 800;
+      transform: rotate(12deg);
+      box-shadow: 0 12px 24px rgba(180, 140, 0, 0.28);
+      text-align: center;
+    }
+
+    .inscricao-selo strong {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .inscricao-selo span {
+      font-size: 0.62rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .inscricao-card h2 {
+      font-size: 1.9em;
+      color: var(--blue-dark);
+      margin-bottom: 0.3em;
+    }
+
+    .inscricao-sub {
+      color: var(--gray);
+      font-weight: 500;
+      margin-bottom: 1.6em;
+    }
+
+    .inscricao-sub strong {
+      color: var(--blue-dark);
+    }
+
+    .inscricao-field {
+      margin-bottom: 14px;
+    }
+
+    .inscricao-field input,
+    .inscricao-field select {
+      width: 100%;
+      min-height: 56px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      background: #fff;
+      appearance: none;
+    }
+
+    .inscricao-field select {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f7785' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 18px;
+      cursor: pointer;
+    }
+
+    .inscricao-field select:invalid {
+      color: var(--gray);
+    }
+
+    .inscricao-field input:focus,
+    .inscricao-field select:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(29,79,191,0.12);
+    }
+
+    .inscricao-phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0 18px;
+      min-height: 56px;
+    }
+
+    .inscricao-phone:focus-within {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(29,79,191,0.12);
+    }
+
+    .inscricao-phone .pais {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--gray);
+      letter-spacing: 0.03em;
+    }
+
+    .inscricao-phone input {
+      border: none;
+      padding: 0;
+      min-height: auto;
+      flex: 1;
+    }
+
+    .inscricao-phone input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .inscricao-termos {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 4px 0 20px;
+    }
+
+    .inscricao-termos input {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--blue);
+    }
+
+    .inscricao-termos label {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .inscricao-termos a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .inscricao-card button.btn {
+      width: 100%;
+      background: linear-gradient(180deg, #1D4FBF 0%, #0D3A8A 52%, #082B66 100%);
+      border: 2px solid rgba(255,255,255,0.28) !important;
+      font-size: 1.05em;
+    }
+
+    /* CONCLUA */
+    section.conclua {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background-image: linear-gradient(rgba(13, 58, 138, 0.42), rgba(42, 169, 165, 0.18)), url('/assets/student.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .conclua .modal {
+      background-color: #fff;
+      width: 600px;
+      max-width: 95%;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-strong);
+    }
+
+    .modal h1 {
+      font-size: 1.8em;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .modal .retangle {
+      border: 2px solid var(--gray);
+      border-radius: 18px;
+      padding: 1.5em;
+      font-weight: 600;
+      color: var(--gray);
+      font-size: 1.1em;
+      width: 100%;
+      max-width: 460px;
+      margin: 1.2em 0;
+      background: #fff;
+    }
+
+    .botoes-tempo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 6px;
+      align-items: center;
+    }
+
+    .btn-14dias {
+      width: 100%;
+      max-width: 460px;
+      min-height: 68px;
+      font-size: 1.12em !important;
+      font-weight: 800 !important;
+      border-radius: 18px !important;
+      background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 52%, #208985 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 14px 30px rgba(42, 169, 165, .35) !important;
+      animation: pulse14 1.8s infinite !important;
+      color: #fff !important;
+    }
+
+    .btn-45dias {
+      width: 100%;
+      max-width: 460px;
+      min-height: 68px;
+      font-size: 1.12em !important;
+      font-weight: 800 !important;
+      border-radius: 18px !important;
+      background: linear-gradient(180deg, #1D4FBF 0%, #0D3A8A 100%) !important;
+      box-shadow: 0 14px 30px rgba(29, 79, 191, .30) !important;
+      color: #fff !important;
+      animation: none !important;
+    }
+
+    .btn-14dias:hover,
+    .btn-45dias:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    @keyframes pulse14 {
+      0% { box-shadow: 0 0 0 0 rgba(42, 169, 165, .55), 0 14px 30px rgba(42, 169, 165, .35); }
+      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0), 0 14px 30px rgba(42, 169, 165, .35); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 14px 30px rgba(42, 169, 165, .35); }
+    }
+
+    /* CREDIBILIDADE */
+    section.credib {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4em 20px;
+      text-align: center;
+    }
+
+    .credib h1 {
+      font-size: 2.5em;
+      margin-bottom: 2em;
+    }
+
+    .credib .flex-cards {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .credib .flex-cards .item {
+      border: 3px solid var(--blue);
+      border-radius: 10px;
+      width: 280px;
+      min-height: 380px;
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .credib .flex-cards .item img {
+      max-height: 72px;
+      margin-bottom: 18px;
+    }
+
+    .credib .flex-cards .item h2 {
+      margin-bottom: 14px;
+      font-size: 1.25em;
+    }
+
+    .credib .flex-cards .item p {
+      font-weight: 600;
+      max-width: 90%;
+      font-size: 0.95em;
+    }
+
+    /* NOVA SEÇÃO SUBSTITUINDO EQUIPE */
+    .processo-simples {
+      min-height: 100vh;
+      padding: 4.5em 20px;
+      background:
+        radial-gradient(circle at top left, rgba(42,169,165,0.10), transparent 18%),
+        radial-gradient(circle at bottom right, rgba(29,79,191,0.16), transparent 18%),
+        linear-gradient(180deg, #061F45 0%, #123C7C 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .processo-wrap {
+      width: 100%;
+      max-width: 1280px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .processo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 2px solid rgba(42,169,165,0.85);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .processo-wrap h1 {
+      font-size: 3.15em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .processo-wrap h1 span {
+      color: #53F2E8;
+    }
+
+    .processo-subtitulo {
+      font-size: 1.18rem;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto 2.4em;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .processo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .processo-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 58px 22px 28px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.14);
+      text-align: center;
+      min-height: 345px;
+      overflow: visible;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      box-shadow: 0 10px 18px rgba(42,169,165,0.35);
+      border: 4px solid #fff;
+    }
+
+    .processo-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(42,169,165,0.10) 0%, rgba(29,79,191,0.10) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border: 2px solid rgba(29,79,191,0.10);
+    }
+
+    .processo-icon img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .processo-card h3 {
+      color: #16326d;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+
+    .processo-card p {
+      color: #5f6777;
+      font-size: 1rem;
+      line-height: 1.75;
+      font-weight: 500;
+    }
+
+    .processo-cta {
+      margin-top: 18px;
+      background:
+        radial-gradient(circle at right bottom, rgba(42,169,165,0.10), transparent 24%),
+        linear-gradient(180deg, #0a2b6d 0%, #08235b 100%);
+      border-radius: 24px;
+      padding: 30px 30px 26px;
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.18);
+      text-align: left;
+    }
+
+    .processo-selo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 100%);
+      color: #083769;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      box-shadow: 0 14px 28px rgba(42,169,165,0.26);
+      border: 6px solid rgba(255,255,255,0.12);
+      text-align: center;
+      line-height: 1.1;
+      font-size: 0.95rem;
+    }
+
+    .processo-selo .check {
+      font-size: 2rem;
+      color: #fff;
+      margin: 4px 0;
+    }
+
+    .processo-cta-copy h2 {
+      font-size: 2.3rem;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .processo-cta-copy h2 span {
+      color: #53F2E8;
+    }
+
+    .processo-cta-copy p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      max-width: 620px;
+      margin-bottom: 20px;
+    }
+
+    .processo-cta-copy .btn {
+      min-width: 430px;
+      max-width: 100%;
+      min-height: 62px;
+      padding: 0.95em 2.2em;
+      border-radius: 16px;
+      font-size: 1.08rem;
+      background: linear-gradient(180deg, #35E1D6 0%, #2AA9A5 52%, #208985 100%);
+      color: #ffffff !important;
+      box-shadow: 0 18px 34px rgba(42,169,165,0.32);
+      animation: pulseCta 2.2s infinite;
+      color: #fff;
+    }
+
+    .processo-cta-copy .btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #53F2E8 0%, #187A77 100%);
+    }
+
+    .processo-privacy {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.92);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .processo-cap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .processo-cap-box {
+      width: 140px;
+      height: 140px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(29,79,191,0.26), rgba(42,169,165,0.16));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.92);
+      font-size: 4rem;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    /* ALUNOS */
+    section.alunos {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4em 20px;
+      text-align: center;
+    }
+
+    .alunos h1 {
+      font-size: 2.5em;
+    }
+
+    .alunos-slider-wrapper {
+      width: 100%;
+      max-width: 1440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 3em 0;
+    }
+
+    .alunos .flex-images {
+      width: 100%;
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      padding: 10px 4px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .alunos .flex-images::-webkit-scrollbar {
+      display: none;
+    }
+
+    .alunos .flex-images .item {
+      flex: 0 0 calc((100% - 90px) / 6);
+      height: 320px;
+      border-radius: 18px;
+      overflow: hidden;
+      background-color: #f3f3f3;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      scroll-snap-align: start;
+    }
+
+    .alunos .flex-images .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slider-btn {
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+      transition: 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-btn:hover {
+      transform: scale(1.08);
+      background: var(--blue-dark);
+    }
+
+    .alunos h2 {
+      font-size: 1.8em;
+    }
+
+    .photo-elipse {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      background-image: url('/assets/pessoas/rafaeladiretora.jpeg?v=3');
+      margin: 1.5em 0;
+      border: 4px solid rgba(42,169,165,0.35);
+      overflow: hidden;
+      box-shadow: 0 14px 28px rgba(6,31,69,0.12);
+    }
+
+    .photo-elipse img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .alunos .diretora {
+      color: var(--gray);
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 1.5em;
+    }
+
+    .contact-buttons a {
+      min-width: 220px;
+    }
+
+    .insta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .insta-btn img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* MATRÍCULA + FAQ */
+    section.requisitos {
+      min-height: 90vh;
+      background:
+        radial-gradient(circle at top left, rgba(42,169,165,0.16), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(29,79,191,0.12), transparent 24%),
+        linear-gradient(180deg, #f4fbfd 0%, #edf6ff 100%);
+      padding: 4.5em 20px;
+      text-align: center;
+    }
+
+    .requisitos-wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .requisitos-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(42,169,165,0.10);
+      border: 1px solid rgba(42,169,165,0.38);
+      color: var(--teal-dark);
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .requisitos h1 {
+      font-size: 2.65em;
+      line-height: 1.12;
+      margin-bottom: 12px;
+      color: #101828;
+      font-weight: 800;
+    }
+
+    .requisitos-subtitle {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: #5f6777;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .requisitos-grid {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 24px;
+      align-items: start;
+      text-align: left;
+    }
+
+    .docs-card,
+    .faq-card {
+      background: rgba(255,255,255,0.96);
+      border: 1px solid #dfe8f5;
+      border-radius: 28px;
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .docs-card {
+      position: sticky;
+      top: 24px;
+    }
+
+    .docs-header,
+    .faq-header {
+      padding: 26px 26px 20px;
+      background:
+        radial-gradient(circle at top right, rgba(42,169,165,0.16), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-bottom: 1px solid #e7eef8;
+    }
+
+    .docs-header h2,
+    .faq-header h2 {
+      font-size: 1.65rem;
+      color: var(--blue-dark);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .docs-header p,
+    .faq-header p {
+      color: #667085;
+      line-height: 1.6;
+      font-weight: 500;
+      font-size: 0.98rem;
+    }
+
+    .docs-list {
+      padding: 24px 26px 10px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .doc-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: center;
+      background: #f8fbff;
+      border: 1px solid #e6edf7;
+      border-radius: 18px;
+      padding: 14px;
+      transition: 0.25s ease;
+    }
+
+    .doc-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(13,58,138,0.08);
+    }
+
+    .doc-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--blue) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.35rem;
+      box-shadow: 0 10px 18px rgba(29,79,191,0.14);
+    }
+
+    .doc-item strong {
+      display: block;
+      color: #152b5f;
+      font-size: 1.03rem;
+      margin-bottom: 2px;
+      font-weight: 800;
+    }
+
+    .doc-item span {
+      color: #667085;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .docs-note {
+      margin: 12px 26px 22px;
+      background: linear-gradient(180deg, rgba(37,211,102,0.10), rgba(42,169,165,0.08));
+      border: 1px solid rgba(37,211,102,0.25);
+      border-radius: 18px;
+      padding: 16px;
+      color: #0f5132;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .docs-cta,
+    .faq-cta {
+      padding: 0 26px 28px;
+    }
+
+    .docs-cta .btn,
+    .faq-cta .btn {
+      width: 100%;
+      min-height: 60px;
+      font-size: 1rem;
+    }
+
+    .faq-list {
+      padding: 20px 24px 8px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e6edf7;
+      border-radius: 18px;
+      box-shadow: 0 8px 18px rgba(13,58,138,0.05);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 54px 18px 18px;
+      color: #13203b;
+      font-weight: 800;
+      font-size: 1rem;
+      position: relative;
+      line-height: 1.35;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--blue) 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item p {
+      padding: 0 18px 18px;
+      color: #5f6777;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .faq-cta {
+      padding-top: 16px;
+    }
+
+    /* DÚVIDAS */
+    section.duvidas {
+      min-height: 40vh;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 3em 20px;
+      text-align: center;
+    }
+
+    .duvidas h1 {
+      font-size: 2em;
+    }
+
+    .duvidas h2 {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    .duvidas-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .duvidas-btn img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      min-height: 50vh;
+      background-color: var(--blue-dark);
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.5em;
+    }
+
+    footer .first-area {
+      min-height: 320px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 30px;
+      color: #fff;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .first-area .area {
+      width: 40%;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.05em;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    .first-area .area > span:first-child {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    span.bold {
+      font-weight: bold;
+    }
+
+    footer .last-area {
+      background-color: #08275f;
+      padding: 1.5em 20px;
+      text-align: center;
+    }
+
+    .last-area span {
+      color: #b8c0d4;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 1200px) {
+      .alunos .flex-images .item {
+        flex: 0 0 calc((100% - 54px) / 4);
+        height: 300px;
+      }
+
+      .recebe-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .processo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .processo-cta {
+        grid-template-columns: 160px 1fr;
+      }
+
+      .processo-cap {
+        display: none;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .requisitos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .docs-card {
+        position: static;
+      }
+
+      .credib .flex-cards .item,
+      .certificacoes .flex-cards .item {
+        width: 260px;
+      }
+
+      .recebe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .processo-wrap h1 {
+        font-size: 2.4em;
+      }
+
+      .processo-cta {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .processo-selo {
+        margin: 0 auto;
+      }
+
+      .processo-cta-copy .btn {
+        min-width: 100%;
+      }
+
+      .processo-privacy {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 800px) {
+      header h1 {
+        font-size: 3.2em;
+      }
+
+      header h2 {
+        font-size: 1.2em;
+      }
+
+      .alunos .flex-images .item {
+        flex: 0 0 calc((100% - 36px) / 3);
+        height: 270px;
+      }
+
+      .slider-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+      }
+
+      .o-que-recebe h2 {
+        font-size: 2em;
+      }
+
+      .processo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .processo-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .certificacoes h1,
+      .credib h1,
+      .alunos h1 {
+        font-size: 1.9em;
+      }
+
+      .requisitos h1,
+      .duvidas h1 {
+        font-size: 1.6em;
+      }
+
+      .docs-header,
+      .faq-header,
+      .docs-list,
+      .faq-list,
+      .docs-cta,
+      .faq-cta {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .docs-note {
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .doc-item {
+        grid-template-columns: 46px 1fr;
+      }
+
+      .doc-icon {
+        width: 46px;
+        height: 46px;
+      }
+
+      .alunos h2 {
+        font-size: 1.35em;
+      }
+
+      .alunos .flex-images .item {
+        flex: 0 0 calc((100% - 18px) / 2);
+        height: 240px;
+      }
+
+      .recebe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recebe-card {
+        min-height: auto;
+      }
+
+      .recebe-btn {
+        min-width: 100%;
+      }
+
+      .processo-badge {
+        font-size: 0.82rem;
+      }
+
+      .processo-wrap h1 {
+        font-size: 1.95rem;
+      }
+
+      .processo-subtitulo {
+        font-size: 1rem;
+      }
+
+      .processo-cta-copy h2 {
+        font-size: 1.8rem;
+      }
+
+      .processo-cta-copy p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .whats-button {
+        width: 62px;
+        height: 62px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      header {
+        min-height: 48vh;
+      }
+
+      header h1 {
+        font-size: 2.6em;
+      }
+
+      header h2 {
+        font-size: 1em;
+      }
+
+      header a.btn {
+        padding: 0.7em 2em;
+        font-size: 1.05em;
+      }
+
+      .certificacoes .flex-cards .item,
+      .credib .flex-cards .item {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .first-area .area {
+        width: 100%;
+      }
+
+      footer {
+        font-size: 0.9em;
+      }
+
+      .o-que-recebe .wrap {
+        padding: 24px 14px;
+      }
+
+      .inscricao-card {
+        padding: 28px 20px;
+      }
+
+      .inscricao-selo {
+        width: 78px;
+        height: 78px;
+        top: -20px;
+        right: -10px;
+      }
+
+      .inscricao-selo strong {
+        font-size: 1rem;
+      }
+
+      .processo-cta {
+        padding: 22px 16px;
+      }
+
+      .processo-selo {
+        width: 126px;
+        height: 126px;
+        font-size: 0.84rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .alunos-slider-wrapper {
+        gap: 8px;
+      }
+
+      .alunos .flex-images .item {
+        flex: 0 0 85%;
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .contact-buttons a {
+        min-width: 200px;
+      }
+
+      .modal h1 {
+        font-size: 1.45em;
+      }
+
+      .modal .retangle {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a
+    href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="gtag_report_conversion();"
+    aria-label="Fale conosco no WhatsApp"
+  >
+    <div class="whats-button">
+      
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.1333 18.6666C21.8667 18.5333 20.1333 17.7333 19.8667 17.6C19.6 17.4666 19.3333 17.4666 19.0667 17.7333C18.8 18 18.2667 18.8 18 19.0666C17.8667 19.3333 17.6 19.3333 17.3333 19.2C16.4 18.8 15.4667 18.2666 14.6667 17.6C14 16.9333 13.3333 16.1333 12.8 15.3333C12.6667 15.0666 12.8 14.8 12.9333 14.6666C13.0667 14.5333 13.2 14.2666 13.4667 14.1333C13.6 14 13.7333 13.7333 13.7333 13.6C13.8667 13.4666 13.8667 13.2 13.7333 13.0666C13.6 12.9333 12.9333 11.3333 12.6667 10.6666C12.5333 9.7333 12.2667 9.7333 12 9.7333C11.8667 9.7333 11.6 9.7333 11.3333 9.7333C11.0667 9.7333 10.6667 9.99997 10.5333 10.1333C9.73333 10.9333 9.33333 11.8666 9.33333 12.9333C9.46666 14.1333 9.86666 15.3333 10.6667 16.4C12.1333 18.5333 14 20.2666 16.2667 21.3333C16.9333 21.6 17.4667 21.8666 18.1333 22C18.8 22.2666 19.4667 22.2666 20.2667 22.1333C21.2 22 22 21.3333 22.5333 20.5333C22.8 20 22.8 19.4666 22.6667 18.9333C22.6667 18.9333 22.4 18.8 22.1333 18.6666ZM25.4667 6.5333C20.2667 1.3333 11.8667 1.3333 6.66666 6.5333C2.4 10.8 1.6 17.3333 4.53333 22.5333L2.66666 29.3333L9.73333 27.4666C11.7333 28.5333 13.8667 29.0666 16 29.0666C23.3333 29.0666 29.2 23.2 29.2 15.8666C29.3333 12.4 27.8667 9.06663 25.4667 6.5333ZM21.8667 25.2C20.1333 26.2666 18.1333 26.9333 16 26.9333C14 26.9333 12.1333 26.4 10.4 25.4666L10 25.2L5.86666 26.2666L6.93333 22.2666L6.66666 21.8666C3.46666 16.5333 5.06666 9.86663 10.2667 6.5333C15.4667 3.19997 22.1333 4.9333 25.3333 9.99997C28.5333 15.2 27.0667 22 21.8667 25.2Z" fill="white"/>
+</svg>
+
+    </div>
+  </a>
+
+  <header>
+    <img src="./assets/headerIMG.jpg" alt="Imagem principal do EJA EAD" />
+    <h1>EJA <span>EAD</span></h1>
+    <h2>Termine os estudos no conforto de seu lar</h2>
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="gtag_report_conversion();"
+    >
+      Eu quero!
+    </a>
+  </header>
+
+  <section class="certificacoes" id="documentacao">
+    <h1>Documentação <span>Oficial</span> e <span>Reconhecida</span></h1>
+    <p class="certificacoes-subtitulo">
+      Segurança e credibilidade para quem deseja concluir os estudos com documentação válida em todo o Brasil.
+    </p>
+
+    <div class="flex-cards">
+      <div class="item">
+        <div class="cert-logo-box">
+          <img src="./assets/diario-oficial.jpeg" alt="Diário Oficial" />
+        </div>
+        <span>Publicação no Diário Oficial</span>
+        <small>Registro oficial</small>
+      </div>
+
+      <div class="item">
+        <div class="cert-logo-box">
+          <img src="./assets/CEE.webp" alt="Conselho Estadual de Educação" />
+        </div>
+        <span>Conselho Estadual de Educação</span>
+        <small>Credenciamento</small>
+      </div>
+
+      <div class="item">
+        <div class="cert-logo-box">
+          <img src="./assets/secretaria%20de%20educa%C3%A7%C3%A3o.webp" alt="Secretaria da Educação" />
+        </div>
+        <span>Secretaria da Educação</span>
+        <small>Sistema oficial</small>
+      </div>
+
+      <div class="item">
+        <div class="cert-logo-box">
+          <img src="./assets/download.jpg" alt="Ministério da Educação" />
+        </div>
+        <span>Ministério da Educação</span>
+        <small>MEC</small>
+      </div>
+
+      <div class="item">
+        <div class="cert-logo-box">
+          <img src="./assets/Logo-Republica.webp" alt="Certificado válido em todo território nacional" />
+        </div>
+        <span>Certificado válido em todo território nacional</span>
+        <small>Todo Brasil</small>
+      </div>
+    </div>
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="gtag_report_conversion();"
+    >
+      Fale com um especialista
+    </a>
+  </section>
+
+  <section class="inscricao-form" id="inscreva-se">
+    <div class="inscricao-card">
+      <div class="inscricao-selo">
+        <strong>-50%</strong>
+        <span>Só hoje</span>
+      </div>
+
+      <h2>Inscreva-se</h2>
+      <p class="inscricao-sub">Início da próxima turma: <strong>este mês</strong></p>
+
+      <form id="formInscricao">
+        <div class="inscricao-field">
+          <input type="text" id="inscricaoNome" placeholder="Nome completo" autocomplete="name" required />
+        </div>
+
+        <div class="inscricao-field">
+          <input type="email" id="inscricaoEmail" placeholder="E-mail" autocomplete="email" required />
+        </div>
+
+        <div class="inscricao-field">
+          <div class="inscricao-phone">
+            <span class="pais">BR</span>
+            <input type="tel" id="inscricaoTelefone" placeholder="+55 (00) 00000-0000" autocomplete="tel" inputmode="numeric" required />
+          </div>
+        </div>
+
+        <div class="inscricao-termos">
+          <input type="checkbox" id="inscricaoTermos" required />
+          <label for="inscricaoTermos">Eu li e aceito os termos e condições da Política de Privacidade.</label>
+        </div>
+
+        <button type="submit" class="btn">Inscreva-se agora</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="o-que-recebe" id="beneficios">
+    <div class="wrap">
+      <h2>O que você recebe</h2>
+
+      <div class="recebe-grid">
+        <div class="recebe-card">
+          <div class="recebe-icon">📄</div>
+          <h3>Declaração de matrícula</h3>
+          <p>Documento que comprova sua matrícula para apresentar no trabalho ou na faculdade.</p>
+        </div>
+
+        <div class="recebe-card">
+          <div class="recebe-icon">🪪</div>
+          <h3>Carteirinha de estudante</h3>
+          <p>Identificação estudantil durante o período de estudos.</p>
+        </div>
+
+        <div class="recebe-card">
+          <div class="recebe-icon">✅</div>
+          <h3>Declaração de conclusão</h3>
+          <p>Documento que comprova a conclusão do Ensino Médio.</p>
+        </div>
+
+        <div class="recebe-card">
+          <div class="recebe-icon">🎓</div>
+          <h3>Certificado e histórico escolar</h3>
+          <p>Documentação oficial com validade em todo o território nacional.</p>
+        </div>
+
+        <div class="recebe-card">
+          <div class="recebe-icon">📰</div>
+          <h3>Publicação no Diário Oficial</h3>
+          <p>Registro oficial do nome do aluno após a conclusão.</p>
+        </div>
+      </div>
+
+      <a
+        class="btn btn-secondary recebe-btn"
+        href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="gtag_report_conversion();"
+      >
+        Quero concluir meus estudos
+      </a>
+    </div>
+  </section>
+
+  <section class="conclua" id="matricula">
+    <div class="modal">
+      <h1>Conclua seu supletivo <span>100% online</span></h1>
+
+      <div class="retangle">
+        <p>Olá! Quero fazer minha prova online e concluir meu Ensino Médio.</p>
+      </div>
+
+      <div class="botoes-tempo">
+        <a
+          class="btn btn-14dias"
+          href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="gtag_report_conversion();"
+        >
+          🚀 CONCLUSÃO EM 90 DIAS
+        </a>
+
+        <a
+          class="btn btn-45dias"
+          href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="gtag_report_conversion();"
+        >
+          🎓 CONCLUSÃO EM 90 DIAS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PROCESSO -->
+  <section class="processo-simples" id="como-funciona">
+    <div class="processo-wrap">
+      <div class="processo-badge">SIMPLES, RÁPIDO E 100% ONLINE</div>
+
+      <h1>Veja como é simples<br><span>concluir seus estudos</span></h1>
+
+      <p class="processo-subtitulo">
+        Um processo fácil, rápido e seguro para você conquistar seu certificado de Ensino Médio.
+      </p>
+
+      <div class="processo-grid">
+        <div class="processo-card">
+          <div class="step-number">1</div>
+          <div class="processo-icon">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 30C37.5277 30 35.111 29.2669 33.0554 27.8934C30.9998 26.5199 29.3976 24.5676 28.4515 22.2835C27.5054 19.9995 27.2579 17.4861 27.7402 15.0614C28.2225 12.6366 29.413 10.4093 31.1612 8.66117C32.9093 6.91301 35.1366 5.7225 37.5614 5.24019C39.9861 4.75787 42.4995 5.00542 44.7835 5.95151C47.0676 6.89761 49.0199 8.49976 50.3934 10.5554C51.7669 12.611 52.5 15.0277 52.5 17.5C52.5 19.1415 52.1767 20.767 51.5485 22.2835C50.9203 23.8001 49.9996 25.1781 48.8388 26.3388C47.6781 27.4996 46.3001 28.4203 44.7835 29.0485C43.267 29.6767 41.6415 30 40 30ZM40 56.7C41.6187 53.3364 43.9701 50.378 46.8815 48.0419C49.793 45.7059 53.1906 44.0514 56.825 43.2H56.95C55.984 39.4385 53.7942 36.1051 50.7255 33.7249C47.6569 31.3447 43.8836 30.0529 40 30.0529C36.1164 30.0529 32.3431 31.3447 29.2745 33.7249C26.2058 36.1051 24.016 39.4385 23.05 43.2C26.7071 44.0345 30.1295 45.6812 33.0637 48.0181C35.9978 50.3551 38.3685 53.3223 40 56.7ZM66.425 55C64.3759 54.9994 62.3293 55.1415 60.3 55.425C49.625 56.875 41.45 62 40.3 68.325C40.1446 68.872 40.0441 69.4331 40 70C40.0037 69.4039 39.9451 68.809 39.825 68.225C38.55 61.9 30.375 56.775 19.825 55.325C17.752 55.069 15.6634 54.9604 13.575 55H5V75H75V55H66.425ZM42.7 56.925C41.8528 58.5079 41.1982 60.1865 40.75 61.925C44.525 57.475 51.4 54.175 59.95 53.025C62.0936 52.7008 64.2571 52.5254 66.425 52.5H70V45H62.65C60.8816 45.0031 59.1197 45.2129 57.4 45.625C54.2991 46.3839 51.3905 47.7807 48.8595 49.7263C46.3285 51.6719 44.2307 54.1236 42.7 56.925ZM20 52.95C28.55 54.1 35.425 57.4 39.225 61.85C38.3532 58.6488 36.7976 55.6746 34.6656 53.1325C32.5335 50.5904 29.8756 48.5408 26.875 47.125C25.4736 46.4722 24.0071 45.9694 22.5 45.625C20.8129 45.2206 19.0849 45.0108 17.35 45H10V52.5H13.575C15.7245 52.5008 17.8714 52.6512 20 52.95Z" fill="#F78748"/>
+</svg>
+          </div>
+          <h3>Matrícula rápida<br>e sem burocracia</h3>
+          <p>Você faz sua matrícula online em poucos minutos, sem precisar de histórico escolar.</p>
+        </div>
+
+        <div class="processo-card">
+          <div class="step-number">2</div>
+          <div class="processo-icon">
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.75001 17.4999C7.14584 17.4999 5.83334 18.8124 5.83334 20.4166V58.3332C5.83334 61.5416 8.45834 64.1666 11.6667 64.1666H49.5833C51.1875 64.1666 52.5 62.8541 52.5 61.2499C52.5 59.6457 51.1875 58.3332 49.5833 58.3332H14.5833C12.9792 58.3332 11.6667 57.0207 11.6667 55.4166V20.4166C11.6667 18.8124 10.3542 17.4999 8.75001 17.4999ZM58.3333 5.83325H23.3333C20.125 5.83325 17.5 8.45825 17.5 11.6666V46.6666C17.5 49.8749 20.125 52.4999 23.3333 52.4999H58.3333C61.5417 52.4999 64.1667 49.8749 64.1667 46.6666V11.6666C64.1667 8.45825 61.5417 5.83325 58.3333 5.83325ZM52.5 32.0833H29.1667C27.5625 32.0833 26.25 30.7708 26.25 29.1666C26.25 27.5624 27.5625 26.2499 29.1667 26.2499H52.5C54.1042 26.2499 55.4167 27.5624 55.4167 29.1666C55.4167 30.7708 54.1042 32.0833 52.5 32.0833ZM40.8333 43.7499H29.1667C27.5625 43.7499 26.25 42.4374 26.25 40.8333C26.25 39.2291 27.5625 37.9166 29.1667 37.9166H40.8333C42.4375 37.9166 43.75 39.2291 43.75 40.8333C43.75 42.4374 42.4375 43.7499 40.8333 43.7499ZM52.5 20.4166H29.1667C27.5625 20.4166 26.25 19.1041 26.25 17.4999C26.25 15.8958 27.5625 14.5833 29.1667 14.5833H52.5C54.1042 14.5833 55.4167 15.8958 55.4167 17.4999C55.4167 19.1041 54.1042 20.4166 52.5 20.4166Z" fill="#F78748"/>
+</svg>
+          </div>
+          <h3>Acesso imediato<br>à plataforma</h3>
+          <p>Após a matrícula, você recebe acesso imediato à plataforma e já pode começar seus estudos.</p>
+        </div>
+
+        <div class="processo-card">
+          <div class="step-number">3</div>
+          <div class="processo-icon">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M62.5 45.8333H54.1667V29.1666C54.1667 28.0615 53.7277 27.0017 52.9463 26.2203C52.1649 25.4389 51.1051 24.9999 50 24.9999C48.8949 24.9999 47.8351 25.4389 47.0537 26.2203C46.2723 27.0017 45.8333 28.0615 45.8333 29.1666V49.9999C45.8333 51.105 46.2723 52.1648 47.0537 52.9462C47.8351 53.7276 48.8949 54.1666 50 54.1666H62.5C63.6051 54.1666 64.6649 53.7276 65.4463 52.9462C66.2277 52.1648 66.6667 51.105 66.6667 49.9999C66.6667 48.8948 66.2277 47.835 65.4463 47.0536C64.6649 46.2722 63.6051 45.8333 62.5 45.8333ZM50 8.33325C41.7591 8.33325 33.7033 10.777 26.8512 15.3554C19.9992 19.9337 14.6587 26.4412 11.505 34.0548C8.35137 41.6684 7.52623 50.0461 9.13395 58.1287C10.7417 66.2112 14.71 73.6355 20.5372 79.4627C26.3644 85.2899 33.7887 89.2583 41.8712 90.866C49.9538 92.4737 58.3316 91.6486 65.9451 88.4949C73.5587 85.3412 80.0662 80.0007 84.6446 73.1487C89.2229 66.2966 91.6667 58.2408 91.6667 49.9999C91.6544 38.953 87.2606 28.3621 79.4492 20.5507C71.6379 12.7394 61.0469 8.34554 50 8.33325ZM50 83.3333C43.4073 83.3333 36.9626 81.3783 31.481 77.7156C25.9993 74.0529 21.7269 68.8469 19.204 62.756C16.6811 56.6652 16.021 49.9629 17.3072 43.4969C18.5933 37.0309 21.768 31.0914 26.4298 26.4297C31.0915 21.7679 37.031 18.5933 43.497 17.3071C49.963 16.0209 56.6652 16.681 62.7561 19.2039C68.847 21.7269 74.0529 25.9993 77.7156 31.4809C81.3784 36.9625 83.3333 43.4072 83.3333 49.9999C83.3232 58.8374 79.8081 67.3099 73.5591 73.559C67.31 79.808 58.8374 83.3231 50 83.3333Z" fill="white"/>
+</svg>
+          </div>
+          <h3>Uma única prova<br>100% online</h3>
+          <p>Você faz uma única prova online, de forma simples, com acompanhamento e suporte da equipe.</p>
+        </div>
+
+        <div class="processo-card">
+          <div class="step-number">4</div>
+          <div class="processo-icon">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M60 15L5 45L25 55.9V85.9L60 105L95 85.9V55.9L105 50.45V85H115V45L60 15ZM94.1 45L60 63.6L25.9 45L60 26.4L94.1 45ZM85 79.95L60 93.6L35 79.95V61.35L60 75L85 61.35V79.95Z" fill="white"/>
+</svg>
+
+          </div>
+          <h3>Receba seu<br>certificado</h3>
+          <p>Concluiu? Você recebe seu certificado e histórico escolar válidos em todo o Brasil.</p>
+        </div>
+      </div>
+
+      <div class="processo-cta">
+        <div class="processo-selo">
+          RECONHECIDO
+          <div class="check">✓</div>
+          PELO MEC
+        </div>
+
+        <div class="processo-cta-copy">
+          <h2>Chegou a hora de transformar<br>seu <span>futuro!</span></h2>
+          <p>
+            Dê o primeiro passo agora e conquiste o certificado que abre portas para novas oportunidades.
+          </p>
+
+          <a
+            class="btn"
+            href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="gtag_report_conversion();"
+          >
+            QUERO CONCLUIR MEU ENSINO MÉDIO AGORA
+          </a>
+
+          <div class="processo-privacy">🔒 Seus dados estão 100% protegidos</div>
+        </div>
+
+        <div class="processo-cap">
+          <div class="processo-cap-box">🎓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alunos" id="depoimentos">
+    <h1>Alunos <span>Satisfeitos</span></h1>
+
+    <div class="alunos-slider-wrapper">
+      <button class="slider-btn prev" type="button" onclick="scrollAlunos(-1)" aria-label="Voltar fotos">‹</button>
+
+      <div class="flex-images" id="alunosSlider">
+        <div class="item"><img src="./assets/pessoa1.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa2.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa3.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa4.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa5.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa6.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa7.png" alt="Aluna formada" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa8.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa9.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa1.png" alt="Aluno formado" loading="lazy" /></div>
+        <div class="item"><img src="./assets/pessoa2.png" alt="Aluno formado" loading="lazy" /></div>
+      </div>
+
+      <button class="slider-btn next" type="button" onclick="scrollAlunos(1)" aria-label="Avançar fotos">›</button>
+    </div>
+
+    <h2>Fale com nossos <span>especialistas</span></h2>
+    <div class="photo-elipse"><img src="/assets/perfil.jpeg" alt="naosei - CEO" loading="lazy" /></div>
+    <h2>Lucas Santos Silva</h2>
+    <span class="diretora">CEO</span>
+
+    <div class="contact-buttons">
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="gtag_report_conversion();"
+      >
+        Enviar mensagem
+      </a>
+
+      <a class="btn btn-secondary insta-btn" href="https://www.instagram.com/supletivo_cceducacional/" target="_blank">
+        <img src="/assets/insta.png" alt="Instagram" />
+        Instagram
+      </a>
+    </div>
+  </section>
+
+  <section class="requisitos" id="duvidas-matricula">
+    <div class="requisitos-wrap">
+      <div class="requisitos-badge">Matrícula simples e dúvidas frequentes</div>
+      <h1>Comece sua matrícula <span>sem burocracia</span></h1>
+      <p class="requisitos-subtitle">
+        Veja os documentos necessários e tire as principais dúvidas antes de falar com nossa equipe pelo WhatsApp.
+      </p>
+
+      <div class="requisitos-grid">
+        <div class="docs-card">
+          <div class="docs-header">
+            <h2>📋 Documentos para matrícula</h2>
+            <p>Você pode enviar tudo pelo WhatsApp, de forma rápida e segura.</p>
+          </div>
+
+          <div class="docs-list">
+            <div class="doc-item">
+              <div class="doc-icon">🪪</div>
+              <div>
+                <strong>RG ou CNH</strong>
+                <span>Documento com foto, frente e verso.</span>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-icon">📄</div>
+              <div>
+                <strong>CPF</strong>
+                <span>Somente se o CPF não aparecer no RG ou CNH.</span>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-icon">🏠</div>
+              <div>
+                <strong>Comprovante de residência</strong>
+                <span>Conta de água, luz, telefone ou documento equivalente.</span>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-icon">🎓</div>
+              <div>
+                <strong>Maior de 18 anos</strong>
+                <span>Atendimento para jovens e adultos que desejam concluir os estudos.</span>
+              </div>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-icon">📱</div>
+              <div>
+                <strong>Envio pelo WhatsApp</strong>
+                <span>Sem precisar comparecer presencialmente.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="docs-note">
+            ✅ Não é obrigatório ter histórico escolar para iniciar o atendimento.
+          </div>
+
+          <div class="docs-cta">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="gtag_report_conversion();"
+            >
+              🚀 Quero fazer minha matrícula
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <h2>❓ Dúvidas frequentes</h2>
+            <p>As principais respostas para quem deseja concluir o Ensino Médio online.</p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>É reconhecido pelo MEC?</summary>
+              <p>Sim. Somos uma instituição de ensino devidamente credenciada e autorizada pelos órgãos competentes da educação, reconhecida pelo MEC, vinculada à Secretaria de Educação e ao Conselho Estadual de Educação (CEE). Toda a documentação emitida possui validade nacional, conforme a legislação educacional vigente.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>O certificado é válido para faculdade?</summary>
+              <p>Sim. O certificado de conclusão do Ensino Médio possui validade nacional e pode ser utilizado para ingresso em faculdades, universidades, concursos públicos, cursos técnicos e demais finalidades que exijam comprovação de escolaridade.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Meu nome é publicado em Diário Oficial?</summary>
+              <p>Sim. Após a conclusão, o nome do aluno é publicado em Diário Oficial, proporcionando mais uma camada de segurança, transparência e comprovação da autenticidade dos documentos emitidos.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Em quanto tempo posso me formar?</summary>
+              <p>O prazo varia de acordo com o plano escolhido e o desempenho do aluno na avaliação, podendo ocorrer em prazos a partir de 14 dias.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Posso fazer tudo pelo celular?</summary>
+              <p>Sim. Matrícula, aulas, materiais de estudo, suporte, prova e acompanhamento podem ser realizados diretamente pelo celular, de qualquer lugar do Brasil.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Como sei que os documentos são verdadeiros?</summary>
+              <p>Todos os documentos emitidos possuem mecanismos de autenticação e validação. Além disso, fornecemos certificado, histórico escolar, declaração de autenticidade e publicação em Diário Oficial.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Já faz mais de 10 anos que parei de estudar. Ainda consigo concluir?</summary>
+              <p>Sim. Grande parte dos nossos alunos ficou anos sem estudar e consegue concluir seus estudos com tranquilidade através de nossa metodologia de ensino e suporte especializado.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Recebo certificado e histórico escolar?</summary>
+              <p>Sim. Após a conclusão, o aluno recebe toda a documentação necessária, incluindo Certificado de Conclusão e Histórico Escolar.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>A prova é online?</summary>
+              <p>Sim. A avaliação é realizada de forma online, oferecendo praticidade e comodidade para alunos de todo o Brasil.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quantos alunos já concluíram os estudos com vocês?</summary>
+              <p>Mais de 27 mil alunos já concluíram seus estudos através de nossa instituição e parceiros educacionais.</p>
+            </details>
+          </div>
+
+          <div class="faq-cta">
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="gtag_report_conversion();"
+            >
+              💬 Tirar dúvidas no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="duvidas" id="contato">
+    <h1>Ainda tem dúvidas?</h1>
+    <h2>Fale com nossa equipe</h2>
+
+    <a
+      class="btn btn-primary duvidas-btn"
+      href="https://wa.me/5521968984525?text=Ol%C3%A1!%20Quero%20fazer%20minha%20prova%20online%20e%20concluir%20meu%20Ensino%20M%C3%A9dio."
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="gtag_report_conversion();"
+    >
+      
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.1333 18.6666C21.8667 18.5333 20.1333 17.7333 19.8667 17.6C19.6 17.4666 19.3333 17.4666 19.0667 17.7333C18.8 18 18.2667 18.8 18 19.0666C17.8667 19.3333 17.6 19.3333 17.3333 19.2C16.4 18.8 15.4667 18.2666 14.6667 17.6C14 16.9333 13.3333 16.1333 12.8 15.3333C12.6667 15.0666 12.8 14.8 12.9333 14.6666C13.0667 14.5333 13.2 14.2666 13.4667 14.1333C13.6 14 13.7333 13.7333 13.7333 13.6C13.8667 13.4666 13.8667 13.2 13.7333 13.0666C13.6 12.9333 12.9333 11.3333 12.6667 10.6666C12.5333 9.7333 12.2667 9.7333 12 9.7333C11.8667 9.7333 11.6 9.7333 11.3333 9.7333C11.0667 9.7333 10.6667 9.99997 10.5333 10.1333C9.73333 10.9333 9.33333 11.8666 9.33333 12.9333C9.46666 14.1333 9.86666 15.3333 10.6667 16.4C12.1333 18.5333 14 20.2666 16.2667 21.3333C16.9333 21.6 17.4667 21.8666 18.1333 22C18.8 22.2666 19.4667 22.2666 20.2667 22.1333C21.2 22 22 21.3333 22.5333 20.5333C22.8 20 22.8 19.4666 22.6667 18.9333C22.6667 18.9333 22.4 18.8 22.1333 18.6666ZM25.4667 6.5333C20.2667 1.3333 11.8667 1.3333 6.66666 6.5333C2.4 10.8 1.6 17.3333 4.53333 22.5333L2.66666 29.3333L9.73333 27.4666C11.7333 28.5333 13.8667 29.0666 16 29.0666C23.3333 29.0666 29.2 23.2 29.2 15.8666C29.3333 12.4 27.8667 9.06663 25.4667 6.5333ZM21.8667 25.2C20.1333 26.2666 18.1333 26.9333 16 26.9333C14 26.9333 12.1333 26.4 10.4 25.4666L10 25.2L5.86666 26.2666L6.93333 22.2666L6.66666 21.8666C3.46666 16.5333 5.06666 9.86663 10.2667 6.5333C15.4667 3.19997 22.1333 4.9333 25.3333 9.99997C28.5333 15.2 27.0667 22 21.8667 25.2Z" fill="white"/>
+</svg>
+
+      Fale conosco
+    </a>
+  </section>
+
+  <footer>
+    <div class="first-area">
+      <div class="area">
+        <span>Sobre nós</span>
+        <p>Somos uma escola que tem como foco o ensino de qualidade para nossos alunos de todo o Brasil com profissionalismo e inovação na área de Educação à Distância.</p>
+      </div>
+
+      <div class="area">
+        <span>Entre em contato</span>
+        <span class="bold">Horário de funcionamento:</span>
+        <p>seg. a sex. - 08h às 17h. / sáb. - 08h às 12h</p>
+
+        <span class="bold">Telefone:</span>
+        <p>(21) 96898-4525</p>
+
+        <span class="bold">E-mail:</span>
+        <p>contato@ejareconhecidomec.com</p>
+      </div>
+    </div>
+
+    <div class="last-area">
+      <span>© Copyright 2024 Centro de Consultoria Educacional, todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script>
+    let alunosAutoSlide;
+
+    function scrollAlunos(direction) {
+      const slider = document.getElementById('alunosSlider');
+      if (!slider) return;
+
+      const firstItem = slider.querySelector('.item');
+      if (!firstItem) return;
+
+      const gap = 18;
+      const scrollAmount = firstItem.offsetWidth + gap;
+
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    function startAlunosAutoSlide() {
+      const slider = document.getElementById('alunosSlider');
+      if (!slider) return;
+
+      alunosAutoSlide = setInterval(function () {
+        const firstItem = slider.querySelector('.item');
+        if (!firstItem) return;
+
+        const gap = 18;
+        const scrollAmount = firstItem.offsetWidth + gap;
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        if (slider.scrollLeft >= maxScrollLeft - 5) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }, 2800);
+    }
+
+    function pauseAlunosAutoSlide() {
+      clearInterval(alunosAutoSlide);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.getElementById('alunosSlider');
+      startAlunosAutoSlide();
+
+      if (slider) {
+        slider.addEventListener('mouseenter', pauseAlunosAutoSlide);
+        slider.addEventListener('mouseleave', startAlunosAutoSlide);
+        slider.addEventListener('touchstart', pauseAlunosAutoSlide, { passive: true });
+        slider.addEventListener('touchend', startAlunosAutoSlide, { passive: true });
+      }
+
+      const telefoneInput = document.getElementById('inscricaoTelefone');
+      if (telefoneInput) {
+        telefoneInput.addEventListener('input', function () {
+          const digits = telefoneInput.value.replace(/\D/g, '').slice(0, 11);
+          let formatted = digits;
+          if (digits.length > 2) {
+            formatted = '(' + digits.slice(0, 2) + ') ' + digits.slice(2);
+          }
+          if (digits.length > 7) {
+            formatted = '(' + digits.slice(0, 2) + ') ' + digits.slice(2, 7) + '-' + digits.slice(7);
+          }
+          telefoneInput.value = formatted;
+        });
+      }
+
+      const formInscricao = document.getElementById('formInscricao');
+      if (formInscricao) {
+        formInscricao.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const nome = document.getElementById('inscricaoNome').value.trim();
+          const email = document.getElementById('inscricaoEmail').value.trim();
+          const telefone = document.getElementById('inscricaoTelefone').value.trim();
+
+          const mensagem =
+            'Olá! Quero me inscrever no supletivo.\n' +
+            'Nome: ' + nome + '\n' +
+            'E-mail: ' + email + '\n' +
+            'Telefone: +55 ' + telefone;
+
+          gtag_report_conversion();
+          window.open('https://wa.me/5521968984525?text=' + encodeURIComponent(mensagem), '_blank', 'noopener,noreferrer');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
